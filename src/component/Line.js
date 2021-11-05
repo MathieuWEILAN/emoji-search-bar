@@ -1,7 +1,7 @@
 import data from "../data.json";
 
 const Line = (props) => {
-  const { handleSearchTerm, searchTerm } = props;
+  const { searchTerm } = props;
   return (
     <div>
       {searchTerm === "" ? (
@@ -10,6 +10,11 @@ const Line = (props) => {
             return (
               <ul key={i}>
                 <li>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(elem.symbol);
+                    }}
+                  ></button>
                   {elem.symbol} &nbsp;
                   {elem.title}
                 </li>
@@ -28,6 +33,11 @@ const Line = (props) => {
                 return (
                   <ul key={i}>
                     <li>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText(value.symbol);
+                        }}
+                      ></button>
                       {value.symbol} {value.title}
                     </li>
                   </ul>

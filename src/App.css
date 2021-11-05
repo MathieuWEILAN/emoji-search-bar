@@ -36,3 +36,9 @@ input {
 h1 {
   font-size: 50px;
 }
+
+button {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}

@@ -1,7 +1,5 @@
-import data from "../data.json";
-
 const Search = (props) => {
-  const { handleSearchTerm, searchTerm } = props;
+  const { handleSearchTerm } = props;
 
   return (
     <div>
